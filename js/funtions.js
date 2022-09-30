@@ -15,14 +15,21 @@ function consultarCliente(){
 }
 
 function pintarRespuesta(items){
-    let myTable = "<table class='bg-gray-100 bg-opacity-75 px-3 pt-5 pb-24rounded-lg overflow-hidden text-center relative'><h2 class='tracking-widest text-3xl title-font font-medium text-gray-400 mb-1'>CLIENTES</h2>";
+    let myTable = "<table class='bg-gray-100 bg-opacity-75 px-3 pt-5 pb-24rounded-lg overflow-hidden text-center relative'><h2 class='tracking-widest text-3xl title-font font-medium text-gray-400 mb-1'>* CLIENTES</h2>";
+    myTable+="<tr>";
+    myTable+="<th> ID </th>";
+    myTable+="<th>NOMBRE</th>";
+    myTable+="<th>E-MAIL</th>"; 
+    myTable+="<th>EDAD</th>";  
+    myTable+="<th> ELIMINAR </th>";
+    myTable+="</tr>";
     for(i=0; i<items.length; i++){
         myTable+="<tr>";
         myTable+="<td> <div class = text-sm title-font font-medium text-gray-400 mb-1><div>"+items[i].id+"</div></td>";
         myTable+="<td> <div class = text-sm title-font font-medium text-gray-400 mb-1><div>"+items[i].name+"</td>";
         myTable+="<td> <div class = text-sm title-font font-medium text-gray-400 mb-1><div>"+items[i].email+"</td>";
         myTable+="<td> <div class = text-sm title-font font-medium text-gray-400 mb-1><div>"+items[i].age+"</td>";
-        myTable+="<td> <button onclick='borrarCliente("+items[i].id+")'class=flex mx-auto text-white bg-indigo-500 border-0 py-1 px-5 focus:outline-none hover:bg-indigo-600 rounded text-sm>Borrar</button>";
+        myTable+="<td><button onclick='borrarMensaje ("+items[i].id+")' class='flex mx-auto text-white bg-red-500 border-0 py-0 px-0 focus:outline-none hover:bg-red-600 rounded text-sm'>| X |</button></td>";
         myTable+="</tr>";
     }
     myTable+="</table>";
@@ -116,17 +123,25 @@ function consultarHerramientas(){
 }   
 
 function pintarRespuestaH(items){
-let myTable = "<table class='bg-gray-100 bg-opacity-75 px-3 pt-5 pb-24rounded-lg overflow-hidden text-center relative'><h2 class='tracking-widest text-3xl title-font font-medium text-gray-400 mb-1'>HERRAMIENTAS</h2>";
-for(i=0; i<items.length; i++){
+    let myTable = "<table class='bg-gray-100 bg-opacity-75 px-3 pt-5 pb-24rounded-lg overflow-hidden text-center relative'><h2 class='tracking-widest text-3xl title-font font-medium text-gray-400 mb-1'>* HERRAMIENTAS</h2>";
     myTable+="<tr>";
-    myTable+="<td>"+items[i].id+"</td>";
-    myTable+="<td>"+items[i].brand+"</td>";
-    myTable+="<td>"+items[i].model+"</td>";
-    myTable+="<td>"+items[i].category_id+"</td>"
-    myTable+="<td>"+items[i].name+"</td>";
-    myTable+="<td> <button onclick='borrarHerramienta("+items[i].id+")'>Borrar</button>";
+    myTable+="<th> ID </th>";
+    myTable+="<th>MARCA</th>";
+    myTable+="<th> MODELO </th>"; 
+    myTable+="<th> CATEGORIA </th>"; 
+    myTable+="<th> NOMBRE </th>"; 
+    myTable+="<th> ELIMINAR </th>";
     myTable+="</tr>";
-}
+    for(i=0; i<items.length; i++){
+        myTable+="<tr>";
+        myTable+="<td><div class = text-sm title-font font-medium text-gray-400 mb-1><div>"+items[i].id+"</td>";
+        myTable+="<td><div class = text-sm title-font font-medium text-gray-400 mb-1><div>"+items[i].brand+"</td>";
+        myTable+="<td><div class = text-sm title-font font-medium text-gray-400 mb-1><div>"+items[i].model+"</td>";
+        myTable+="<td><div class = text-sm title-font font-medium text-gray-400 mb-1><div>"+items[i].category_id+"</td>"
+        myTable+="<td><div class = text-sm title-font font-medium text-gray-400 mb-1><div>"+items[i].name+"</td>";
+        myTable+="<td><button onclick='borrarMensaje ("+items[i].id+")' class='flex mx-auto text-white bg-red-500 border-0 py-0 px-0 focus:outline-none hover:bg-red-600 rounded text-sm'>| X |</button></td>";
+        myTable+="</tr>";
+    }
 myTable+="</table>";
 $("#resultado").append(myTable);
 }
@@ -222,19 +237,17 @@ function consultarMensaje(){
 }
 
 function pintarRespuestaM(items){
-    let myTable = "<table class='bg-gray-100 bg-opacity-75 px-3 pt-5 pb-24rounded-lg overflow-hidden text-center relative'><h2 class='tracking-widest text-3xl title-font font-medium text-gray-400 mb-1'>MENSAJES</h2>";
+    let myTable = "<table class='bg-gray-100 bg-opacity-75 px-3 pt-5 pb-24rounded-lg overflow-hidden text-center relative'><h2 class='tracking-widest text-3xl title-font font-medium text-gray-400 mb-1'>* MENSAJES</h2>";
     myTable+="<tr>";
-    myTable+="<th>| ID |</th>";
+    myTable+="<th> ID </th>";
     myTable+="<th> MENSAJE </th>";
-    myTable+="<th>| ELIMINAR |</th>"; 
+    myTable+="<th> ELIMINAR </th>"; 
     myTable+="</tr>";
     for(i=0; i<items.length; i++){
         myTable+="<tr>";
-        myTable+="<td>"+items[i].id+"</td>";
-        myTable+="<td>"+items[i].messagetext+"</td>";
-
+        myTable+="<td><div class = text-sm title-font font-medium text-gray-400 mb-1><div>"+items[i].id+"</td>";
+        myTable+="<td><div class = text-sm title-font font-medium text-gray-400 mb-1><div>"+items[i].messagetext+"</td>";
         myTable+="<td><button onclick='borrarMensaje ("+items[i].id+")' class='flex mx-auto text-white bg-red-500 border-0 py-0 px-0 focus:outline-none hover:bg-red-600 rounded text-sm'>| X |</button></td>";
-        
         myTable+="</tr>";
     }
     myTable+="</table>";
