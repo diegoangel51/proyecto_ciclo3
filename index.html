@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <style>
+    body{
+      background-color: rgb(192, 195, 44);
+    }
+  </style>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/funtions.js"></script>
+    <title>Alquiler Herramientas</title>
+  </head>
+
+  <body>
+    <section class="text-gray-600 body-font">
+      <div class="flex flex-wrap text-base w-100 mb+4">
+        <h1 class="px+10 py-3 mx-auto sm:text-5xl font-medium title-center mb-4
+          text-gray-800">Alquiler Herramientas USA</h1>
+      </div>
+
+      <div class="container px-5 py-2 mx-auto">
+        <h1 class="mx-auto sm:text-5xl font-medium title-center mb-2
+          text-gray-800">Reto 2!!</h1>
+
+        <div class="flex flex-wrap -m-2">
+          <div class="p-4 lg:w-1/3">
+            <div class="h-full bg-gray-300 bg-opacity-80 px-3 pt-5 pb-24
+              rounded-lg overflow-hidden text-center relative">
+              <h2 class="tracking-widest text-3xl title-font font-medium
+                text-gray-600 mb-1">CLIENTES</h2>
+
+              <div class="flex flex-col">
+                <div class="p-2 w-full">
+                  <div class="relative">
+                    <input type="number" id="idCliente" placeholder="Identificación" 
+                      class="w-full bg-gray-100 bg-opacity-50 rounded border 
+                      border-gray-300 focus:border-indigo-500 focus:bg-white 
+                      focus:ring-2 focus:ring-indigo-200 text-base outline-none 
+                      text-gray-700 py-1 px-3 leading-8 transition-colors 
+                      duration-200 ease-in-out">
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap -m+3">
+                <div class="p-2 w-full">
+                  <div class="relative">
+                    <input type="text" id="nameCliente" placeholder="Nombre"
+                      class="w-full bg-gray-100 bg-opacity-50 rounded border
+                      border-gray-300 focus:border-indigo-500 focus:bg-white
+                      focus:ring-2 focus:ring-indigo-200 text-base outline-none
+                      text-gray-700 py-1 px-3 leading-8 transition-colors
+                      duration-200 ease-in-out">
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap -m+3">
+                <div class="p-2 w-full">
+                  <div class="relative">
+                    <input type="number" id="age" placeholder="Edad"
+                      class="w-full bg-gray-100 bg-opacity-50 rounded border
+                      border-gray-300 focus:border-indigo-500 focus:bg-white
+                      focus:ring-2 focus:ring-indigo-200 text-base outline-none
+                      text-gray-700 py-1 px-3 leading-8 transition-colors
+                      duration-200 ease-in-out">
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap -m+3">
+                <div class="p-2 w-full">
+                  <div class="relative">
+                    <input type="email" id="email" placeholder="E-mail"
+                      class="w-full bg-gray-100 bg-opacity-50 rounded border
+                      border-gray-300 focus:border-indigo-500 focus:bg-white
+                      focus:ring-2 focus:ring-indigo-200 text-base outline-none
+                      text-gray-700 py-1 px-3 leading-8 transition-colors
+                      duration-200 ease-in-out">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="text-center leading-none flex justify-center absolute
+                bottom-6 left-0 w-full py-4">
+                <span class="text-gray-400 inline-flex leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor"
+                    stroke-width="2" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                  </svg><button onclick="guardarCliente()" class="flex mx-auto
+                    text-white bg-indigo-500 border-0 py-1 px-5
+                    focus:outline-none hover:bg-indigo-600 rounded text-sm">Guardar</button>
+                </span>
+
+                <span class="text-gray-400 inline-flex leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor"
+                    stroke-width="2" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                  </svg><button onclick="consultarCliente()" class="flex mx-auto
+                    text-white bg-indigo-500 border-0 py-1 px-5
+                    focus:outline-none hover:bg-indigo-600 rounded text-sm">Consultar</button>
+                </span>
+
+                <span class="text-gray-400 inline-flex leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor"
+                    stroke-width="2" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                  </svg><button onclick="actualizarCliente()" class="flex
+                    mx-auto text-white bg-indigo-500 border-0 py-1 px-5
+                    focus:outline-none hover:bg-indigo-600 rounded text-sm">Actualizar</button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="p-4 lg:w-1/3">
+            <div class="h-full bg-gray-300 bg-opacity-80 px-3 pt-5 pb-24
+              rounded-lg overflow-hidden text-center relative">
+              <h2 class="tracking-widest text-3xl title-font font-medium
+                text-gray-600 mb-1">HERRAMENTAS</h2>
+              <div class="lg:w-50/8 md:w-16/10 mx-auto">
+                <div class="flex flex-wrap -m+3">
+                  <div class="p-2 w-full">
+                    <div class="relative">
+                      <input type="number" id="idHerramienta" placeholder="Id"
+                        class="w-full bg-gray-100 bg-opacity-50 rounded border
+                        border-gray-300 focus:border-indigo-500 focus:bg-white
+                        focus:ring-2 focus:ring-indigo-200 text-base
+                        outline-none text-gray-700 py-1 px-3 leading-8
+                        transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="lg:w-50/8 md:w-16/10 mx-auto">
+                <div class="flex flex-wrap -m+3">
+                  <div class="p-2 w-full">
+                    <div class="relative">
+                      <input type="text" id="brand" placeholder="Marca"
+                        class="w-full bg-gray-100 bg-opacity-50 rounded border
+                        border-gray-300 focus:border-indigo-500 focus:bg-white
+                        focus:ring-2 focus:ring-indigo-200 text-base
+                        outline-none text-gray-700 py-1 px-3 leading-8
+                        transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="lg:w-50/8 md:w-16/10 mx-auto">
+                <div class="flex flex-wrap -m+3">
+                  <div class="p-2 w-full">
+                    <div class="relative">
+                      <input type="number" id="model" placeholder="Modelo"
+                        class="w-full bg-gray-100 bg-opacity-50 rounded border
+                        border-gray-300 focus:border-indigo-500 focus:bg-white
+                        focus:ring-2 focus:ring-indigo-200 text-base
+                        outline-none text-gray-700 py-1 px-3 leading-8
+                        transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lg:w-50/8 md:w-16/10 mx-auto">
+                <div class="flex flex-wrap -m+3">
+                  <div class="p-2 w-full">
+                    <div class="relative">
+                      <input type="number" id="category_id"
+                        placeholder="Categoria" class="w-full bg-gray-100
+                        bg-opacity-50 rounded border border-gray-300
+                        focus:border-indigo-500 focus:bg-white focus:ring-2
+                        focus:ring-indigo-200 text-base outline-none
+                        text-gray-700 py-1 px-3 leading-8 transition-colors
+                        duration-200 ease-in-out">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lg:w-50/8 md:w-16/10 mx-auto">
+                <div class="flex flex-wrap -m+3">
+                  <div class="p-2 w-full">
+                    <div class="relative">
+                      <input type="text" id="nameHerramienta"
+                        placeholder="Nombre" class="w-full bg-gray-100
+                        bg-opacity-50 rounded border border-gray-300
+                        focus:border-indigo-500 focus:bg-white focus:ring-2
+                        focus:ring-indigo-200 text-base outline-none
+                        text-gray-700 py-1 px-3 leading-8 transition-colors
+                        duration-200 ease-in-out">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="text-center mt-2 leading-none flex justify-center
+                absolute bottom-6 left-0 w-full py-4">
+                <span class="text-gray-400 mr-3 inline-flex items-center
+                  leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor"
+                    stroke-width="2" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                  </svg><button onclick="guardarHerramienta()" class="flex
+                    mx-auto text-white bg-indigo-500 border-0 py-1 px-5
+                    focus:outline-none hover:bg-indigo-600 rounded text-sm">Guardar</button>
+                </span>
+                <span class="text-gray-400 inline-flex items-center leading-none
+                  text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor"
+                    stroke-width="2" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                  </svg><button onclick="consultarHerramientas()" class="flex
+                    mx-auto text-white bg-indigo-500 border-0 py-1 px-5
+                    focus:outline-none hover:bg-indigo-600 rounded text-sm">Consultar</button>
+                </span>
+                <span class="text-gray-400 inline-flex items-center leading-none
+                  text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor"
+                    stroke-width="2" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                  </svg><button onclick="actualizarHerramienta()" class="flex
+                    mx-auto text-white bg-indigo-500 border-0 py-1 px-5
+                    focus:outline-none hover:bg-indigo-600 rounded text-sm">Actualizar</button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 lg:w-1/3">
+            <div class="h-full bg-gray-300 bg-opacity-80 px-3 pt-5 pb-24
+              rounded-lg overflow-hidden text-center relative">
+              <h1 class="tracking-widest text-3xl title-font font-medium
+                text-gray-600 mb-1">MENSAJE</h1>
+
+              <div class="lg:w-50/8 md:w-16/10 mx-auto">
+                <div class="flex flex-wrap -m+3">
+                  <div class="p-2 w-full">
+                    <div class="relative">
+                      <input type="number" id="idMessage" placeholder="ID"
+                        class="w-full bg-gray-100 bg-opacity-50 rounded border
+                        border-gray-300 focus:border-indigo-500 focus:bg-white
+                        focus:ring-2 focus:ring-indigo-200 text-base
+                        outline-none text-gray-700 py-1 px-3 leading-8
+                        transition-colors duration-200 ease-in-out">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lg:w-50/8 md:w-16/10 mx-auto">
+                <div class="flex flex-wrap -m+3">
+                  <div class="p-2 w-full">
+                    <div class="relative">
+                      <textarea id="messagetext" placeholder="Mensaje"
+                        class="w-full bg-gray-100 bg-opacity-50 rounded border
+                        border-gray-300 focus:border-indigo-500 focus:bg-white
+                        focus:ring-2 focus:ring-indigo-200 h-32 text-base
+                        outline-none text-gray-700 py-1 px-6 resize-none
+                        leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="text-center mt-2 leading-none flex justify-center
+                absolute bottom-6 left-0 w-full py-4">
+                <span class="text-gray-400 mr-3 inline-flex items-center
+                  leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor"
+                    stroke-width="2" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                  </svg><button onclick="guardarMensaje()" class="flex mx-auto
+                    text-white bg-indigo-500 border-0 py-1 px-5
+                    focus:outline-none hover:bg-indigo-600 rounded text-sm">Guardar</button>
+                </span>
+                <span class="text-gray-400 inline-flex items-center leading-none
+                  text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor"
+                    stroke-width="2" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                  </svg><button onclick="consultarMensaje()" class="flex mx-auto
+                    text-white bg-indigo-500 border-0 py-1 px-5
+                    focus:outline-none hover:bg-indigo-600 rounded text-sm">Consultar</button>
+                </span>
+                <span class="text-gray-400 inline-flex items-center leading-none
+                  text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor"
+                    stroke-width="2" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                  </svg><button onclick="actualizarMensaje()" class="flex
+                    mx-auto text-white bg-indigo-500 border-0 py-1 px-5
+                    focus:outline-none hover:bg-indigo-600 rounded text-sm">Actualizar</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class= "antialiased text-slate-800 bg-gray-500">
+      <div class="flex-block max-w-xl p-4 md:pd-8 mx-auto mt-8">
+        <div class="bg-white shadow overflow-hidden rounded-lg">
+          <div class="px-4 py-5 sm:px-6 flex justify-between">
+            <div id="resultado"></div> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
